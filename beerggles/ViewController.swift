@@ -14,25 +14,26 @@ class ViewController: UIViewController {
     let captureSession = AVCaptureSession()
     var captureDevice : AVCaptureDevice?
 
+    @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var optionsView: UIView!
     
-    /// BEERGGLE SCALE BUTTONS
+    var animating: Bool = false
+    
+    /// ANIMATION
+    var beerggle_value: Double = 0
+    var DEFAULT_SCALING: Double = 10.0
+    var FADE_OUT_SCALING: Double = 2.0
+    
+    var delay: NSTimeInterval = 0
+    var duration: NSTimeInterval = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /// Camera View Logic
+        /// blurView
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.bringUpOptions))
-        cameraView.addGestureRecognizer(tapGesture)
-        
-        /// Options View Logic
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = self.optionsView.bounds
-        blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        self.optionsView.addSubview(blurEffectView)
-        self.optionsView.sendSubviewToBack(blurEffectView)
+        blurView.addGestureRecognizer(tapGesture)
         
         /// Camera Capture Logic
         captureSession.sessionPreset = AVCaptureSessionPresetLow
@@ -43,8 +44,24 @@ class ViewController: UIViewController {
             }
         }
         
+        /// Start video capture
         if (captureDevice != nil) {
-            beginSession()
+            do {
+                captureSession.addInput( try AVCaptureDeviceInput(device: captureDevice))
+            } catch {
+                /// todo: error handling
+            }
+            
+            let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+            self.cameraView.layer.addSublayer(previewLayer)
+            previewLayer?.frame = self.cameraView.bounds
+            
+            let previewLayerConnection: AVCaptureConnection = previewLayer.connection
+            
+            /// we are limiting app to Landscape Left
+            previewLayerConnection.videoOrientation = AVCaptureVideoOrientation.LandscapeLeft
+            
+            captureSession.startRunning()
         } else {
             // todo: throw an error cannot read camera
         }
@@ -55,47 +72,43 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func beginSession() {
-        do {
-            captureSession.addInput( try AVCaptureDeviceInput(device: captureDevice))
-        } catch {
-            /// todo: error handling
-        }
-        
-        let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        self.cameraView.layer.addSublayer(previewLayer)
-        previewLayer?.frame = self.cameraView.bounds
-        
-        let previewLayerConnection: AVCaptureConnection = previewLayer.connection
-        
-        let currentDevice: UIDevice = UIDevice.currentDevice()
-        let orientation: UIDeviceOrientation = currentDevice.orientation
-        
-        /// we are limiting app to Landscape Left and Landscape Right
-        if (previewLayerConnection.supportsVideoOrientation) {
-            switch(orientation) {
-            case .LandscapeRight:
-                previewLayerConnection.videoOrientation = AVCaptureVideoOrientation.LandscapeRight
-                break
-             default:
-                previewLayerConnection.videoOrientation = AVCaptureVideoOrientation.LandscapeLeft
-                break
-            }
-        }
-        
-        self.view.bringSubviewToFront(optionsView)
-        
-        captureSession.startRunning()
-    }
-    
     func bringUpOptions() {
+        self.animating = false
+        self.blurView.layer.removeAllAnimations()
         self.view.bringSubviewToFront(optionsView)
     }
 
     @IBAction func setBeerggleScale(sender: BeerggleScaleButton) {
         self.view.sendSubviewToBack(optionsView)
+        
+        beerggle_value = sender.beerggle_scale / DEFAULT_SCALING
+        
+        duration = 0.85
+        delay = 0
+        
+        self.animating = true
+        fadeIn()
     }
-
+    
+    func fadeIn() {
+        UIView.animateWithDuration(duration, delay: delay, options: [.CurveEaseInOut, .AllowUserInteraction], animations: {
+            self.blurView.alpha = CGFloat(self.beerggle_value)
+            }) { (finished) in
+                if (self.animating) {
+                    self.fadeOut()
+                }
+        }
+    }
+    
+    func fadeOut() {
+        UIView.animateWithDuration(duration, delay: delay, options: [.CurveEaseInOut, .AllowUserInteraction], animations: {
+            self.blurView.alpha = CGFloat(self.beerggle_value / self.FADE_OUT_SCALING)
+        }) { (finished) in
+            if (self.animating) {
+                self.fadeIn()
+            }
+        }
+    }
 
 }
 

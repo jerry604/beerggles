@@ -3,8 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,221 +18,238 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dT-ur-pn5">
-                                <rect key="frame" x="0.0" y="-180" width="600" height="780"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="-110" width="600" height="710"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yxw-eg-p98">
-                                <rect key="frame" x="0.0" y="12" width="600" height="588"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEr-e3-cVK" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
-                                        <rect key="frame" x="85" y="279" width="30" height="30"/>
-                                        <state key="normal" title="0">
-                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
-                                                <integer key="value" value="0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZN5-3R-l4o"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NP6-E9-0FB" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
-                                        <rect key="frame" x="125" y="279" width="30" height="30"/>
-                                        <state key="normal" title="1">
-                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BAD-mw-LWe"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIn-hf-LH3" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
-                                        <rect key="frame" x="165" y="279" width="30" height="30"/>
-                                        <state key="normal" title="2">
-                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
-                                                <integer key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="70N-WA-c7s"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgV-a9-YIz" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
-                                        <rect key="frame" x="205" y="279" width="30" height="30"/>
-                                        <state key="normal" title="3">
-                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bT1-7P-d5e"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWf-8O-xRv" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
-                                        <rect key="frame" x="245" y="279" width="30" height="30"/>
-                                        <state key="normal" title="4">
-                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
-                                                <integer key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Htd-XX-ZjG"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15X-aR-sh8" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
-                                        <rect key="frame" x="285" y="279" width="30" height="30"/>
-                                        <state key="normal" title="5">
-                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iKO-8x-e1h"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqN-fu-h9n" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
-                                        <rect key="frame" x="325" y="279" width="30" height="30"/>
-                                        <state key="normal" title="6">
-                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
-                                                <integer key="value" value="6"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2rV-kH-FAL"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKl-3v-sbt" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
-                                        <rect key="frame" x="365" y="279" width="30" height="30"/>
-                                        <state key="normal" title="7">
-                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
-                                                <integer key="value" value="7"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqh-2I-Riv"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pU-dQ-x32" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
-                                        <rect key="frame" x="405" y="279" width="30" height="30"/>
-                                        <state key="normal" title="8">
-                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
-                                                <integer key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RfH-8E-z8l"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRf-Iq-5lw" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
-                                        <rect key="frame" x="445" y="279" width="30" height="30"/>
-                                        <state key="normal" title="9">
-                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
-                                                <integer key="value" value="9"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uuG-J7-dSK"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdM-ZD-5Ja" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
-                                        <rect key="frame" x="485" y="279" width="30" height="30"/>
-                                        <state key="normal" title="10">
-                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RsU-Wo-tDJ"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beerggle Scale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nb4-97-oUv">
-                                        <rect key="frame" x="0.0" y="30" width="600" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="r4H-C8-NYh"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="7pU-dQ-x32" firstAttribute="leading" secondItem="eKl-3v-sbt" secondAttribute="trailing" constant="10" id="0Qh-Op-Jal"/>
-                                    <constraint firstItem="zRf-Iq-5lw" firstAttribute="centerY" secondItem="Yxw-eg-p98" secondAttribute="centerY" id="6Qt-Qn-iUk"/>
-                                    <constraint firstItem="7pU-dQ-x32" firstAttribute="centerY" secondItem="Yxw-eg-p98" secondAttribute="centerY" id="8EN-SK-XEg"/>
-                                    <constraint firstItem="WdM-ZD-5Ja" firstAttribute="centerY" secondItem="Yxw-eg-p98" secondAttribute="centerY" id="Cs9-fg-M5m"/>
-                                    <constraint firstItem="EgV-a9-YIz" firstAttribute="centerY" secondItem="Yxw-eg-p98" secondAttribute="centerY" id="GMc-5M-Qrb"/>
-                                    <constraint firstItem="zRf-Iq-5lw" firstAttribute="leading" secondItem="7pU-dQ-x32" secondAttribute="trailing" constant="10" id="HcS-Cb-dc3"/>
-                                    <constraint firstItem="eKl-3v-sbt" firstAttribute="centerY" secondItem="Yxw-eg-p98" secondAttribute="centerY" id="I3P-yR-ssl"/>
-                                    <constraint firstItem="EgV-a9-YIz" firstAttribute="leading" secondItem="IIn-hf-LH3" secondAttribute="trailing" constant="10" id="I92-EI-YOO"/>
-                                    <constraint firstAttribute="trailing" secondItem="nb4-97-oUv" secondAttribute="trailing" id="Ikg-yX-dPD"/>
-                                    <constraint firstItem="NP6-E9-0FB" firstAttribute="centerY" secondItem="Yxw-eg-p98" secondAttribute="centerY" id="IlZ-XI-vRV"/>
-                                    <constraint firstItem="WdM-ZD-5Ja" firstAttribute="leading" secondItem="zRf-Iq-5lw" secondAttribute="trailing" constant="10" id="MGQ-Cg-Y8v"/>
-                                    <constraint firstItem="15X-aR-sh8" firstAttribute="leading" secondItem="xWf-8O-xRv" secondAttribute="trailing" constant="10" id="O5m-PY-aUY"/>
-                                    <constraint firstItem="NP6-E9-0FB" firstAttribute="leading" secondItem="OEr-e3-cVK" secondAttribute="trailing" constant="10" id="QAi-Z1-bWY"/>
-                                    <constraint firstItem="eKl-3v-sbt" firstAttribute="leading" secondItem="JqN-fu-h9n" secondAttribute="trailing" constant="10" id="Ud0-y4-CXM"/>
-                                    <constraint firstItem="15X-aR-sh8" firstAttribute="centerX" secondItem="Yxw-eg-p98" secondAttribute="centerX" id="WoG-jP-a6s"/>
-                                    <constraint firstItem="nb4-97-oUv" firstAttribute="top" secondItem="Yxw-eg-p98" secondAttribute="top" constant="30" id="Yyc-m1-l8F"/>
-                                    <constraint firstItem="IIn-hf-LH3" firstAttribute="leading" secondItem="NP6-E9-0FB" secondAttribute="trailing" constant="10" id="hdi-7o-SyG"/>
-                                    <constraint firstItem="xWf-8O-xRv" firstAttribute="centerY" secondItem="Yxw-eg-p98" secondAttribute="centerY" id="iVu-bZ-G0U"/>
-                                    <constraint firstItem="JqN-fu-h9n" firstAttribute="centerY" secondItem="Yxw-eg-p98" secondAttribute="centerY" id="icd-Be-da7"/>
-                                    <constraint firstItem="JqN-fu-h9n" firstAttribute="leading" secondItem="15X-aR-sh8" secondAttribute="trailing" constant="10" id="jJN-pv-9aD"/>
-                                    <constraint firstItem="15X-aR-sh8" firstAttribute="centerY" secondItem="Yxw-eg-p98" secondAttribute="centerY" id="kgq-5U-9dI"/>
-                                    <constraint firstItem="xWf-8O-xRv" firstAttribute="leading" secondItem="EgV-a9-YIz" secondAttribute="trailing" constant="10" id="l6P-0a-Dcg"/>
-                                    <constraint firstItem="nb4-97-oUv" firstAttribute="leading" secondItem="Yxw-eg-p98" secondAttribute="leading" id="q1E-tb-QkH"/>
-                                    <constraint firstItem="OEr-e3-cVK" firstAttribute="centerY" secondItem="Yxw-eg-p98" secondAttribute="centerY" id="sR9-wP-g5p"/>
-                                    <constraint firstItem="IIn-hf-LH3" firstAttribute="centerY" secondItem="Yxw-eg-p98" secondAttribute="centerY" id="yJ3-wf-TOn"/>
-                                </constraints>
-                            </view>
+                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BM9-f2-49b">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Da7-Zb-BoD">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C33-O6-YFK">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="A2y-dF-ZoS">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NP6-E9-0FB" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
+                                            <rect key="frame" x="133" y="275" width="30" height="30"/>
+                                            <state key="normal" title="1">
+                                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BAD-mw-LWe"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIn-hf-LH3" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
+                                            <rect key="frame" x="171" y="275" width="30" height="30"/>
+                                            <state key="normal" title="2">
+                                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
+                                                    <integer key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="70N-WA-c7s"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgV-a9-YIz" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
+                                            <rect key="frame" x="209" y="275" width="30" height="30"/>
+                                            <state key="normal" title="3">
+                                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bT1-7P-d5e"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWf-8O-xRv" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
+                                            <rect key="frame" x="247" y="275" width="30" height="30"/>
+                                            <state key="normal" title="4">
+                                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Htd-XX-ZjG"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15X-aR-sh8" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
+                                            <rect key="frame" x="285" y="275" width="30" height="30"/>
+                                            <state key="normal" title="5">
+                                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iKO-8x-e1h"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqN-fu-h9n" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
+                                            <rect key="frame" x="323" y="275" width="30" height="30"/>
+                                            <state key="normal" title="6">
+                                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
+                                                    <integer key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2rV-kH-FAL"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKl-3v-sbt" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
+                                            <rect key="frame" x="361" y="275" width="30" height="30"/>
+                                            <state key="normal" title="7">
+                                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
+                                                    <integer key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqh-2I-Riv"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pU-dQ-x32" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
+                                            <rect key="frame" x="399" y="275" width="30" height="30"/>
+                                            <state key="normal" title="8">
+                                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RfH-8E-z8l"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRf-Iq-5lw" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
+                                            <rect key="frame" x="437" y="275" width="30" height="30"/>
+                                            <state key="normal" title="9">
+                                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
+                                                    <integer key="value" value="9"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uuG-J7-dSK"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdM-ZD-5Ja" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
+                                            <rect key="frame" x="475" y="275" width="30" height="30"/>
+                                            <state key="normal" title="10">
+                                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RsU-Wo-tDJ"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beerggle Scale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nb4-97-oUv">
+                                            <rect key="frame" x="0.0" y="64" width="600" height="31"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="3Io-8B-eZ7"/>
+                                                <constraint firstAttribute="height" constant="31" id="r4H-C8-NYh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEr-e3-cVK" customClass="BeerggleScaleButton" customModule="beerggles" customModuleProvider="target">
+                                            <rect key="frame" x="95" y="275" width="30" height="30"/>
+                                            <state key="normal" title="0">
+                                                <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="beerggle_scale">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="setBeerggleScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZN5-3R-l4o"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="IIn-hf-LH3" firstAttribute="leading" secondItem="NP6-E9-0FB" secondAttribute="trailing" constant="8" id="1HF-P0-2io"/>
+                                        <constraint firstItem="EgV-a9-YIz" firstAttribute="centerY" secondItem="A2y-dF-ZoS" secondAttribute="centerY" id="5SZ-AH-9qm"/>
+                                        <constraint firstItem="JqN-fu-h9n" firstAttribute="centerY" secondItem="A2y-dF-ZoS" secondAttribute="centerY" id="B6J-M7-ekc"/>
+                                        <constraint firstItem="OEr-e3-cVK" firstAttribute="centerY" secondItem="A2y-dF-ZoS" secondAttribute="centerY" id="HnQ-UZ-yRL"/>
+                                        <constraint firstItem="nb4-97-oUv" firstAttribute="top" secondItem="A2y-dF-ZoS" secondAttribute="top" constant="64" id="I5B-ge-H2g"/>
+                                        <constraint firstItem="15X-aR-sh8" firstAttribute="centerX" secondItem="A2y-dF-ZoS" secondAttribute="centerX" id="KCJ-3K-3Rg"/>
+                                        <constraint firstItem="7pU-dQ-x32" firstAttribute="leading" secondItem="eKl-3v-sbt" secondAttribute="trailing" constant="8" id="MEj-fT-V7k"/>
+                                        <constraint firstItem="NP6-E9-0FB" firstAttribute="leading" secondItem="OEr-e3-cVK" secondAttribute="trailing" constant="8" id="MJm-NR-3A5"/>
+                                        <constraint firstItem="zRf-Iq-5lw" firstAttribute="centerY" secondItem="A2y-dF-ZoS" secondAttribute="centerY" id="MgG-E8-KkT"/>
+                                        <constraint firstItem="IIn-hf-LH3" firstAttribute="centerY" secondItem="A2y-dF-ZoS" secondAttribute="centerY" id="MtC-iZ-NZk"/>
+                                        <constraint firstItem="nb4-97-oUv" firstAttribute="leading" secondItem="A2y-dF-ZoS" secondAttribute="leading" id="Nzl-f6-Pif"/>
+                                        <constraint firstItem="xWf-8O-xRv" firstAttribute="centerY" secondItem="A2y-dF-ZoS" secondAttribute="centerY" id="Srp-cx-YBe"/>
+                                        <constraint firstItem="eKl-3v-sbt" firstAttribute="leading" secondItem="JqN-fu-h9n" secondAttribute="trailing" constant="8" id="V7Z-TP-GMx"/>
+                                        <constraint firstItem="EgV-a9-YIz" firstAttribute="leading" secondItem="IIn-hf-LH3" secondAttribute="trailing" constant="8" id="bGS-5i-aXv"/>
+                                        <constraint firstItem="WdM-ZD-5Ja" firstAttribute="centerY" secondItem="A2y-dF-ZoS" secondAttribute="centerY" id="dNF-Kn-shz"/>
+                                        <constraint firstItem="JqN-fu-h9n" firstAttribute="leading" secondItem="15X-aR-sh8" secondAttribute="trailing" constant="8" id="eZP-CK-9e9"/>
+                                        <constraint firstItem="7pU-dQ-x32" firstAttribute="centerY" secondItem="A2y-dF-ZoS" secondAttribute="centerY" id="hlB-bo-n7f"/>
+                                        <constraint firstAttribute="trailing" secondItem="nb4-97-oUv" secondAttribute="trailing" id="iru-0c-blM"/>
+                                        <constraint firstItem="xWf-8O-xRv" firstAttribute="leading" secondItem="EgV-a9-YIz" secondAttribute="trailing" constant="8" id="o4X-f3-CQl"/>
+                                        <constraint firstItem="15X-aR-sh8" firstAttribute="centerY" secondItem="A2y-dF-ZoS" secondAttribute="centerY" id="pEp-5k-eC3"/>
+                                        <constraint firstItem="15X-aR-sh8" firstAttribute="leading" secondItem="xWf-8O-xRv" secondAttribute="trailing" constant="8" id="qAM-2T-lqc"/>
+                                        <constraint firstItem="NP6-E9-0FB" firstAttribute="centerY" secondItem="A2y-dF-ZoS" secondAttribute="centerY" id="rdV-Wl-r9s"/>
+                                        <constraint firstItem="WdM-ZD-5Ja" firstAttribute="leading" secondItem="zRf-Iq-5lw" secondAttribute="trailing" constant="8" id="sZo-l8-uKz"/>
+                                        <constraint firstItem="eKl-3v-sbt" firstAttribute="centerY" secondItem="A2y-dF-ZoS" secondAttribute="centerY" id="xEt-YW-J4O"/>
+                                        <constraint firstItem="zRf-Iq-5lw" firstAttribute="leading" secondItem="7pU-dQ-x32" secondAttribute="trailing" constant="8" id="yjY-em-Ro2"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="8dT-ur-pn5" secondAttribute="trailing" id="0vT-J6-KGb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="C33-O6-YFK" secondAttribute="bottom" id="BjK-S8-jp5"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8dT-ur-pn5" secondAttribute="bottom" id="GA9-tw-prO"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yxw-eg-p98" secondAttribute="bottom" id="Puh-4G-O2p"/>
-                            <constraint firstItem="Yxw-eg-p98" firstAttribute="topMargin" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Vde-Jx-ZVE"/>
-                            <constraint firstAttribute="trailing" secondItem="Yxw-eg-p98" secondAttribute="trailing" id="c7X-VT-iBD"/>
-                            <constraint firstItem="Yxw-eg-p98" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d5l-u7-Gwv"/>
-                            <constraint firstItem="8dT-ur-pn5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-200" id="qED-iv-pi2"/>
+                            <constraint firstItem="BM9-f2-49b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GSf-Uh-lSF"/>
+                            <constraint firstAttribute="trailing" secondItem="C33-O6-YFK" secondAttribute="trailing" id="LvP-fc-wfU"/>
+                            <constraint firstAttribute="trailing" secondItem="BM9-f2-49b" secondAttribute="trailing" id="TlD-H5-kEE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BM9-f2-49b" secondAttribute="bottom" id="foO-4n-UdC"/>
+                            <constraint firstItem="C33-O6-YFK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gDx-yB-meY"/>
+                            <constraint firstItem="8dT-ur-pn5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-130" id="qED-iv-pi2"/>
+                            <constraint firstItem="C33-O6-YFK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="u7M-fL-IiL"/>
                             <constraint firstItem="8dT-ur-pn5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="utm-lC-vlQ"/>
+                            <constraint firstItem="BM9-f2-49b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vi6-fW-3K3"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blurView" destination="BM9-f2-49b" id="iMg-2Y-16V"/>
                         <outlet property="cameraView" destination="8dT-ur-pn5" id="efz-v4-ys9"/>
-                        <outlet property="optionsView" destination="Yxw-eg-p98" id="xzE-an-bVn"/>
+                        <outlet property="optionsView" destination="C33-O6-YFK" id="VpK-Ro-Wj3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

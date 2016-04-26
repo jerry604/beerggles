@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4303631CCF30AC00F11C84 /* conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4303621CCF30AC00F11C84 /* conveniences.swift */; };
 		CE498F1B1CC09D6300CE340C /* BeerggleScaleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE498F1A1CC09D6300CE340C /* BeerggleScaleButton.swift */; };
 		CEB5C6041CBADC98008C46F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5C6031CBADC98008C46F6 /* AppDelegate.swift */; };
 		CEB5C6061CBADC98008C46F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5C6051CBADC98008C46F6 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE4303621CCF30AC00F11C84 /* conveniences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = conveniences.swift; sourceTree = "<group>"; };
 		CE498F1A1CC09D6300CE340C /* BeerggleScaleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerggleScaleButton.swift; sourceTree = "<group>"; };
 		CEB5C6001CBADC97008C46F6 /* beerggles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beerggles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB5C6031CBADC98008C46F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE4303611CCF309300F11C84 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				CE4303621CCF30AC00F11C84 /* conveniences.swift */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
 		CE498F191CC09D2000CE340C /* ui */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 		CEB5C6021CBADC98008C46F6 /* beerggles */ = {
 			isa = PBXGroup;
 			children = (
+				CE4303611CCF309300F11C84 /* util */,
 				CE498F191CC09D2000CE340C /* ui */,
 				CEB5C6031CBADC98008C46F6 /* AppDelegate.swift */,
 				CEB5C6051CBADC98008C46F6 /* ViewController.swift */,
@@ -268,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE498F1B1CC09D6300CE340C /* BeerggleScaleButton.swift in Sources */,
+				CE4303631CCF30AC00F11C84 /* conveniences.swift in Sources */,
 				CEB5C6061CBADC98008C46F6 /* ViewController.swift in Sources */,
 				CEB5C6041CBADC98008C46F6 /* AppDelegate.swift in Sources */,
 			);
